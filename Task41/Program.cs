@@ -7,13 +7,16 @@ Console.WriteLine("Сколько чисел Вы хотите ввести: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
 int count = 0;
-int [] array = new int[num];
-for (int i = 0; i < num; i++)
+if(num > 0) 
 {
-  Console.WriteLine($"Введите число {i + 1}: ");
-  array[i] = Convert.ToInt32(Console.ReadLine());
+    int[] array = new int[num];
+    for (int i = 0; i < num; i++)
+    {
+        Console.WriteLine($"Введите число {i + 1}: ");
+        array[i] = Convert.ToInt32(Console.ReadLine());
 
-  if (array[i] > 0) count = count + 1;
+        if (array[i] > 0) count = count + 1;
+    }
+    Console.WriteLine($"Количество положительных чисел: {count}");
 }
-Console.WriteLine($"Количество положительных чисел: {count}");
-
+else Console.WriteLine("Нужно ввести положительное число");
