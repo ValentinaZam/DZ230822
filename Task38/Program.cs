@@ -33,6 +33,7 @@ void PrintArray(double[] array)
     Console.Write("]");
     Console.WriteLine();
 }
+
 double[] arr = CreateArrayRnd(10, 1, 10);
 PrintArray(arr);
 
