@@ -37,21 +37,36 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-
 int[,] array2D = CreateMatrixRndInt(3, 4, -9, 9);
+
 PrintMatrix(array2D);
 
 Console.WriteLine("Введите номер строки: ");
-int numrow = Convert.ToInt32(Console.ReadLine()) - 1;
+int num1 = Convert.ToInt32(Console.ReadLine()) - 1;
 Console.WriteLine("Введите номер столбца: ");
-int numcol = Convert.ToInt32(Console.ReadLine()) - 1;
+int num2 = Convert.ToInt32(Console.ReadLine()) - 1;
 
-if (numrow < array2D.GetLength(0) &&
- numcol < array2D.GetLength(1) &&
+void MeaningElementMatrix(int[,] arr, int numrow, int numcol)
+{
+if (numrow < arr.GetLength(0) &&
+ numcol < arr.GetLength(1) &&
  numrow > 0 &&
  numcol > 0
  )
 {
-    Console.WriteLine(array2D[numrow, numcol]);
+    Console.WriteLine($"Значение элемента: {array2D[numrow, numcol]}");
 }
 else Console.WriteLine("Значение не сущществует");
+}
+
+MeaningElementMatrix(array2D, num1, num2);
+
+// if (numrow < array2D.GetLength(0) &&
+//  numcol < array2D.GetLength(1) &&
+//  numrow > 0 &&
+//  numcol > 0
+//  )
+// {
+//     Console.WriteLine(array2D[numrow, numcol]);
+// }
+// else Console.WriteLine("Значение не сущществует");
